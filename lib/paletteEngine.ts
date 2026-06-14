@@ -101,8 +101,11 @@ export function generatePalette(
   return slots.map((s) => ({
     hex: s.color.hex,
     name: s.color.name,
+    nameEn: s.color.nameEn ?? s.color.name,
     fromPainting: s.source.name,
+    fromPaintingEn: s.source.nameEn ?? s.source.name,
     fromArtist: s.source.artist,
+    fromArtistEn: s.source.artistEn ?? s.source.artist,
     rerollsLeft: maxRerolls,
   }));
 }

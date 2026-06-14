@@ -82,7 +82,7 @@ export default function ResultPage() {
       }
       ta.remove();
     }
-    showToast(copied ? `已复制 ${hex.toUpperCase()}` : "复制失败");
+    showToast(copied ? `Copied ${hex.toUpperCase()}` : "Copy failed");
   };
 
   const handleReroll = (index: number) => {
@@ -93,7 +93,11 @@ export default function ResultPage() {
       .filter((_, i) => i !== index)
       .map((c) => ({ hex: c.hex, weight: 1, name: c.name }));
     const newColor = rerollColor(sourcePainting.colors, slot.hex, others);
-    updatePaletteColor(index, { hex: newColor.hex, name: newColor.name });
+    updatePaletteColor(index, {
+      hex: newColor.hex,
+      name: newColor.name,
+      nameEn: newColor.nameEn,
+    });
     decrementReroll(index);
   };
 
@@ -104,7 +108,7 @@ export default function ResultPage() {
 
         <section className="mt-12">
           <h3 className="mb-4 text-center text-xs uppercase tracking-widest text-neutral-400">
-            你选择的画作
+            Your selected paintings
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {selections.map((s) => (
@@ -112,14 +116,17 @@ export default function ResultPage() {
                 <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-neutral-200">
                   <Image
                     src={`/paintings/${s.filename}`}
-                    alt={s.name}
+                    alt={s.nameEn ?? s.name}
                     fill
                     sizes="120px"
                     className="object-cover"
                     style={{ objectPosition: s.objectPosition ?? "center center" }}
                   />
                 </div>
-                <div className="mt-1.5 text-[11px] text-neutral-600 leading-tight">
+                <div className="mt-1.5 text-[11px] font-medium text-neutral-700 leading-tight">
+                  {s.nameEn ?? s.name}
+                </div>
+                <div className="text-[10px] text-neutral-400 leading-tight">
                   {s.name}
                 </div>
               </div>
@@ -129,10 +136,10 @@ export default function ResultPage() {
 
         <section className="mt-14">
           <h3 className="mb-1 text-center text-xs uppercase tracking-widest text-neutral-400">
-            你的专属调色盘
+            Your personal palette
           </h3>
           <p className="mb-6 text-center text-xs text-neutral-500">
-            点击色块复制 HEX · 骰子图标重新抽取（每色最多 3 次）
+            Tap a swatch to copy its HEX · 🎲 to re-roll (up to 3 per color)
           </p>
           <PaletteDisplay
             palette={generatedPalette}
@@ -150,7 +157,7 @@ export default function ResultPage() {
             }}
             className="rounded-full border border-neutral-300 bg-white px-6 py-2.5 text-sm text-neutral-700 transition hover:bg-neutral-100"
           >
-            重新测试
+            Retake test
           </button>
         </div>
       </div>

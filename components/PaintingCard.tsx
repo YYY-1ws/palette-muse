@@ -5,7 +5,13 @@ import { useState } from "react";
 
 export interface PaintingCardProps {
   filename: string;
-  name: string;
+  /** English title — shown as the primary label. */
+  nameEn: string;
+  /** Chinese title — shown as a smaller subtitle. */
+  name?: string;
+  /** English artist — shown as the primary artist label. */
+  artistEn?: string;
+  /** Chinese artist — shown in the smaller subtitle. */
   artist?: string;
   selected?: boolean;
   dimmed?: boolean;
@@ -18,7 +24,9 @@ export interface PaintingCardProps {
 
 export function PaintingCard({
   filename,
+  nameEn,
   name,
+  artistEn,
   artist,
   selected = false,
   dimmed = false,
@@ -29,6 +37,7 @@ export function PaintingCard({
 }: PaintingCardProps) {
   const [loaded, setLoaded] = useState(false);
   const src = `/paintings/${filename}`;
+  const zhSubtitle = [name, artist].filter(Boolean).join(" · ");
 
   return (
     <button
@@ -39,14 +48,14 @@ export function PaintingCard({
       } ${dimmed ? "opacity-40" : "opacity-100"} ${
         onClick ? "cursor-pointer hover:scale-[1.02]" : "cursor-default"
       }`}
-      aria-label={artist ? `${name} — ${artist}` : name}
+      aria-label={artistEn ? `${nameEn} — ${artistEn}` : nameEn}
     >
       {!loaded && (
         <div className="absolute inset-0 animate-pulse bg-neutral-200" />
       )}
       <Image
         src={src}
-        alt={name}
+        alt={nameEn}
         fill
         sizes="(max-width: 768px) 100vw, 25vw"
         className={`object-cover transition-opacity duration-500 ${
@@ -57,8 +66,11 @@ export function PaintingCard({
         onLoad={() => setLoaded(true)}
       />
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-3 text-left text-white">
-        <div className="text-sm font-medium">{name}</div>
-        {artist && <div className="text-xs opacity-80">{artist}</div>}
+        <div className="text-sm font-medium leading-tight">{nameEn}</div>
+        {artistEn && <div className="text-xs opacity-90">{artistEn}</div>}
+        {zhSubtitle && (
+          <div className="mt-0.5 text-[11px] opacity-70">{zhSubtitle}</div>
+        )}
       </div>
     </button>
   );

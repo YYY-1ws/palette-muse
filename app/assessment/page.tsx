@@ -16,8 +16,8 @@ export default function AssessmentPage() {
   const [pendingId, setPendingId] = useState<string | null>(null);
   const [showResumePrompt, setShowResumePrompt] = useState(false);
 
-  // The "已完成测试" prompt only applies when arriving on this page with a
-  // finished assessment — decide once at hydration so completing round 5
+  // The "already completed" prompt only applies when arriving on this page
+  // with a finished assessment — decide once at hydration so completing round 5
   // in-session doesn't flash it while navigating to /result.
   useEffect(() => {
     setHydrated(true);
@@ -34,10 +34,10 @@ export default function AssessmentPage() {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center bg-neutral-50 px-6 text-center">
         <h2 className="text-xl font-medium text-neutral-900">
-          上次已完成测试
+          You&apos;ve already completed the test
         </h2>
         <p className="mt-2 text-sm text-neutral-600">
-          要查看上次的结果，还是重新开始？
+          View your previous result, or start over?
         </p>
         <div className="mt-6 flex gap-3">
           <button
@@ -45,7 +45,7 @@ export default function AssessmentPage() {
             onClick={() => router.push("/result")}
             className="rounded-full bg-neutral-900 px-6 py-2.5 text-sm text-white transition hover:bg-neutral-800"
           >
-            查看结果
+            View result
           </button>
           <button
             type="button"
@@ -55,7 +55,7 @@ export default function AssessmentPage() {
             }}
             className="rounded-full border border-neutral-300 px-6 py-2.5 text-sm text-neutral-700 transition hover:bg-neutral-100"
           >
-            重新开始
+            Start over
           </button>
         </div>
       </main>
@@ -71,7 +71,9 @@ export default function AssessmentPage() {
       id: p.id,
       filename: p.filename,
       name: p.name,
+      nameEn: p.nameEn,
       artist: p.artist,
+      artistEn: p.artistEn,
       personality: p.personality,
       colors: p.colors,
       objectPosition: p.objectPosition,
@@ -92,7 +94,7 @@ export default function AssessmentPage() {
       <RoundDisplay
         roundIndex={currentRound}
         total={data.rounds.length}
-        theme={round.theme}
+        theme={round.themeEn}
         paintings={round.paintings}
         selectedId={pendingId}
         onSelect={handleSelect}

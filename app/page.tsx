@@ -16,14 +16,15 @@ export default function HomePage() {
           Palette Muse
         </h1>
         <p className="mt-4 text-base text-neutral-700 md:text-lg">
-          从名画中发现你的色彩
+          Discover your colors through masterpieces
         </p>
+        <p className="mt-1 text-sm text-neutral-500">从名画中发现你的色彩</p>
 
         <Link
           href="/assessment"
           className="mt-12 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-8 py-4 text-sm text-white shadow-lg transition hover:scale-[1.03] hover:bg-neutral-800"
         >
-          🎨 发现我的风格
+          🎨 Discover my style
         </Link>
       </motion.div>
     </main>

@@ -28,7 +28,7 @@ export function RoundDisplay({
           {roundIndex + 1} / {total} · {theme}
         </div>
         <h2 className="mt-2 text-2xl font-medium text-neutral-900">
-          选一幅你最喜欢的
+          Choose your favorite
         </h2>
       </header>
 
@@ -45,7 +45,9 @@ export function RoundDisplay({
             <PaintingCard
               key={p.id}
               filename={p.filename}
+              nameEn={p.nameEn}
               name={p.name}
+              artistEn={p.artistEn}
               artist={p.artist}
               selected={selectedId === p.id}
               dimmed={selectedId !== null && selectedId !== p.id}

@@ -13,10 +13,11 @@ export function PersonalityResult({ info }: { info: PersonalityInfo }) {
     >
       <div className="text-5xl">{info.icon}</div>
       <h1 className="mt-4 text-3xl font-semibold text-neutral-900">
-        {info.name}
+        {info.nameEn}
       </h1>
+      <div className="mt-1 text-sm text-neutral-400">{info.name}</div>
       <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-neutral-600">
-        {info.description}
+        {info.descriptionEn}
       </p>
     </motion.div>
   );

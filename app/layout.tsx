@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Palette Muse — 从名画中发现你的色彩",
-  description: "通过 5 轮选画，发现属于你的色彩人格与专属调色盘。",
+  title: "Palette Muse — Discover your color personality through art",
+  description:
+    "Pick the paintings you love across five rounds to discover your color personality and a palette of your own.",
 };
 
 export default function RootLayout({
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="zh-CN"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

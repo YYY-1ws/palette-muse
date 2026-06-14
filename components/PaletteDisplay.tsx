@@ -42,18 +42,19 @@ export function PaletteDisplay({
               type="button"
               onClick={() => onCopy(color.hex)}
               className="absolute inset-0 flex flex-col justify-end p-4 text-left"
-              aria-label={`复制 ${color.hex}`}
+              aria-label={`Copy ${color.hex}`}
             >
-              <div className={`text-base font-medium ${textColor}`}>
-                {color.name}
+              <div className={`text-base font-medium leading-tight ${textColor}`}>
+                {color.nameEn}
               </div>
+              <div className={`text-xs ${subText}`}>{color.name}</div>
               <div
                 className={`mt-1 font-mono text-xs uppercase tracking-wider ${subText}`}
               >
                 {color.hex}
               </div>
               <div className={`mt-2 text-[11px] leading-tight ${subText}`}>
-                {color.fromArtist}《{color.fromPainting}》
+                {color.fromPaintingEn} · {color.fromArtistEn}
               </div>
             </button>
 
@@ -66,8 +67,10 @@ export function PaletteDisplay({
               disabled={rerollDisabled}
               title={
                 rerollDisabled
-                  ? "已用完 3 次 re-roll"
-                  : `还可 re-roll ${color.rerollsLeft} 次`
+                  ? "No re-rolls left (3 used)"
+                  : `${color.rerollsLeft} re-roll${
+                      color.rerollsLeft === 1 ? "" : "s"
+                    } left`
               }
               className={`absolute right-2 top-2 flex items-center gap-1 rounded-full px-2.5 py-1 text-xs backdrop-blur transition ${
                 rerollDisabled
@@ -76,7 +79,7 @@ export function PaletteDisplay({
                     ? "bg-black/15 text-white hover:bg-black/30"
                     : "bg-white/20 text-white hover:bg-white/30"
               }`}
-              aria-label="重新抽取此颜色"
+              aria-label="Re-roll this color"
             >
               <span aria-hidden>🎲</span>
               <span>×{color.rerollsLeft}</span>

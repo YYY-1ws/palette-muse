@@ -18,27 +18,32 @@
             {
               "hex": "#5E8C6A",
               "weight": 0.3,
-              "name": "莲叶绿"
+              "name": "莲叶绿",
+              "nameEn": "Lotus Leaf Green"
             },
             {
               "hex": "#A7C5BD",
               "weight": 0.25,
-              "name": "水面青"
+              "name": "水面青",
+              "nameEn": "Water Surface Teal"
             },
             {
               "hex": "#D4A8C0",
               "weight": 0.2,
-              "name": "睡莲粉"
+              "name": "睡莲粉",
+              "nameEn": "Water Lily Pink"
             },
             {
               "hex": "#3B6B5E",
               "weight": 0.15,
-              "name": "深潭绿"
+              "name": "深潭绿",
+              "nameEn": "Deep Pool Green"
             },
             {
               "hex": "#E8DDD0",
               "weight": 0.1,
-              "name": "晨雾白"
+              "name": "晨雾白",
+              "nameEn": "Morning Mist White"
             }
           ]
         },
@@ -55,27 +60,32 @@
             {
               "hex": "#1A1410",
               "weight": 0.3,
-              "name": "深夜黑"
+              "name": "深夜黑",
+              "nameEn": "Midnight Black"
             },
             {
               "hex": "#8B2E3B",
               "weight": 0.25,
-              "name": "暗红玫瑰"
+              "name": "暗红玫瑰",
+              "nameEn": "Dark Rose Red"
             },
             {
               "hex": "#C9956A",
               "weight": 0.2,
-              "name": "枯金色"
+              "name": "枯金色",
+              "nameEn": "Withered Gold"
             },
             {
               "hex": "#4A3028",
               "weight": 0.15,
-              "name": "焦褐色"
+              "name": "焦褐色",
+              "nameEn": "Burnt Umber"
             },
             {
               "hex": "#D4B8A0",
               "weight": 0.1,
-              "name": "古象牙"
+              "name": "古象牙",
+              "nameEn": "Antique Ivory"
             }
           ]
         },
@@ -92,27 +102,32 @@
             {
               "hex": "#E8B828",
               "weight": 0.3,
-              "name": "向日葵黄"
+              "name": "向日葵黄",
+              "nameEn": "Sunflower Yellow"
             },
             {
               "hex": "#C17F24",
               "weight": 0.25,
-              "name": "花蕊橙"
+              "name": "花蕊橙",
+              "nameEn": "Stamen Orange"
             },
             {
               "hex": "#F4D03F",
               "weight": 0.2,
-              "name": "柠金色"
+              "name": "柠金色",
+              "nameEn": "Lemon Gold"
             },
             {
               "hex": "#8B5E34",
               "weight": 0.15,
-              "name": "枝干褐"
+              "name": "枝干褐",
+              "nameEn": "Stem Brown"
             },
             {
               "hex": "#3D6B4F",
               "weight": 0.1,
-              "name": "叶片绿"
+              "name": "叶片绿",
+              "nameEn": "Leaf Green"
             }
           ]
         },
@@ -129,27 +144,32 @@
             {
               "hex": "#C5A44E",
               "weight": 0.3,
-              "name": "金箔色"
+              "name": "金箔色",
+              "nameEn": "Gold Leaf"
             },
             {
               "hex": "#3A4F9E",
               "weight": 0.25,
-              "name": "群青蓝"
+              "name": "群青蓝",
+              "nameEn": "Ultramarine Blue"
             },
             {
               "hex": "#4D7A3E",
               "weight": 0.2,
-              "name": "菖蒲绿"
+              "name": "菖蒲绿",
+              "nameEn": "Iris Green"
             },
             {
               "hex": "#6B5BAE",
               "weight": 0.15,
-              "name": "花瓣紫"
+              "name": "花瓣紫",
+              "nameEn": "Petal Purple"
             },
             {
               "hex": "#D4C28A",
               "weight": 0.1,
-              "name": "老金色"
+              "name": "老金色",
+              "nameEn": "Aged Gold"
             }
           ]
         }
@@ -158,13 +178,13 @@
     {
       "round": 2,
       "theme": "风景",
-      "themeEn": "Landscapes",
+      "themeEn": "Landscape",
       "paintings": [
         {
           "id": "r2_fresh",
           "filename": "Fine_Wind_Clear_Morning.jpg",
           "name": "凯风快晴",
-          "nameEn": "Fine Wind, Clear Morning",
+          "nameEn": "Red Fuji",
           "artist": "葛饰北斋",
           "artistEn": "Katsushika Hokusai",
           "year": "1831",
@@ -173,27 +193,32 @@
             {
               "hex": "#B8432F",
               "weight": 0.3,
-              "name": "赤富士"
+              "name": "赤富士",
+              "nameEn": "Red Fuji"
             },
             {
               "hex": "#6BA3C7",
               "weight": 0.25,
-              "name": "晴空蓝"
+              "name": "晴空蓝",
+              "nameEn": "Clear Sky Blue"
             },
             {
               "hex": "#F5ECD7",
               "weight": 0.2,
-              "name": "云白色"
+              "name": "云白色",
+              "nameEn": "Cloud White"
             },
             {
               "hex": "#2D5A3E",
               "weight": 0.15,
-              "name": "树海绿"
+              "name": "树海绿",
+              "nameEn": "Forest Sea Green"
             },
             {
               "hex": "#E8D5B0",
               "weight": 0.1,
-              "name": "薄云黄"
+              "name": "薄云黄",
+              "nameEn": "Pale Cloud Yellow"
             }
           ]
         },
@@ -210,27 +235,32 @@
             {
               "hex": "#1A3A5C",
               "weight": 0.3,
-              "name": "深夜蓝"
+              "name": "深夜蓝",
+              "nameEn": "Midnight Blue"
             },
             {
               "hex": "#3B6998",
               "weight": 0.25,
-              "name": "旋涡蓝"
+              "name": "旋涡蓝",
+              "nameEn": "Swirl Blue"
             },
             {
               "hex": "#F4D03F",
               "weight": 0.2,
-              "name": "星光黄"
+              "name": "星光黄",
+              "nameEn": "Starlight Yellow"
             },
             {
               "hex": "#2E5A1C",
               "weight": 0.15,
-              "name": "柏树绿"
+              "name": "柏树绿",
+              "nameEn": "Cypress Green"
             },
             {
               "hex": "#0D2137",
               "weight": 0.1,
-              "name": "天际黑"
+              "name": "天际黑",
+              "nameEn": "Horizon Black"
             }
           ]
         },
@@ -247,27 +277,32 @@
             {
               "hex": "#E87D38",
               "weight": 0.3,
-              "name": "日出橙"
+              "name": "日出橙",
+              "nameEn": "Sunrise Orange"
             },
             {
               "hex": "#6B8FAD",
               "weight": 0.25,
-              "name": "雾港蓝"
+              "name": "雾港蓝",
+              "nameEn": "Misty Harbor Blue"
             },
             {
               "hex": "#94AFC5",
               "weight": 0.2,
-              "name": "晨雾灰蓝"
+              "name": "晨雾灰蓝",
+              "nameEn": "Misty Grey-Blue"
             },
             {
               "hex": "#F5C77E",
               "weight": 0.15,
-              "name": "金辉色"
+              "name": "金辉色",
+              "nameEn": "Golden Glow"
             },
             {
               "hex": "#2C4A62",
               "weight": 0.1,
-              "name": "远帆黑蓝"
+              "name": "远帆黑蓝",
+              "nameEn": "Distant Sail Blue"
             }
           ]
         },
@@ -284,27 +319,32 @@
             {
               "hex": "#2A7A6A",
               "weight": 0.3,
-              "name": "石青色"
+              "name": "石青色",
+              "nameEn": "Azurite Blue"
             },
             {
               "hex": "#4A9B8A",
               "weight": 0.25,
-              "name": "青绿山"
+              "name": "青绿山",
+              "nameEn": "Blue-Green Mountain"
             },
             {
               "hex": "#C9D8B0",
               "weight": 0.2,
-              "name": "远山黄绿"
+              "name": "远山黄绿",
+              "nameEn": "Distant Hill Green"
             },
             {
               "hex": "#1A4A3A",
               "weight": 0.15,
-              "name": "深谷绿"
+              "name": "深谷绿",
+              "nameEn": "Deep Valley Green"
             },
             {
               "hex": "#E8D8C0",
               "weight": 0.1,
-              "name": "绢本米"
+              "name": "绢本米",
+              "nameEn": "Silk Scroll Beige"
             }
           ]
         }
@@ -313,7 +353,7 @@
     {
       "round": 3,
       "theme": "人物",
-      "themeEn": "Portraits",
+      "themeEn": "Figures",
       "paintings": [
         {
           "id": "r3_fresh",
@@ -328,27 +368,32 @@
             {
               "hex": "#4A6B8A",
               "weight": 0.3,
-              "name": "头巾蓝"
+              "name": "头巾蓝",
+              "nameEn": "Turban Blue"
             },
             {
               "hex": "#E8D4A8",
               "weight": 0.25,
-              "name": "肌肤金"
+              "name": "肌肤金",
+              "nameEn": "Golden Skin"
             },
             {
               "hex": "#1A2A3A",
               "weight": 0.2,
-              "name": "暗夜底"
+              "name": "暗夜底",
+              "nameEn": "Dark Backdrop"
             },
             {
               "hex": "#C9B078",
               "weight": 0.15,
-              "name": "暖光黄"
+              "name": "暖光黄",
+              "nameEn": "Warm Glow Yellow"
             },
             {
               "hex": "#F0E8D8",
               "weight": 0.1,
-              "name": "珍珠白"
+              "name": "珍珠白",
+              "nameEn": "Pearl White"
             }
           ]
         },
@@ -365,27 +410,32 @@
             {
               "hex": "#2D4A3E",
               "weight": 0.3,
-              "name": "沼泽绿"
+              "name": "沼泽绿",
+              "nameEn": "Marsh Green"
             },
             {
               "hex": "#4A6B5A",
               "weight": 0.25,
-              "name": "水草青"
+              "name": "水草青",
+              "nameEn": "Waterweed Green"
             },
             {
               "hex": "#8B6F5C",
               "weight": 0.2,
-              "name": "浮木褐"
+              "name": "浮木褐",
+              "nameEn": "Driftwood Brown"
             },
             {
               "hex": "#3D5C4A",
               "weight": 0.15,
-              "name": "幽潭暗绿"
+              "name": "幽潭暗绿",
+              "nameEn": "Shadowed Pool Green"
             },
             {
               "hex": "#C9A882",
               "weight": 0.1,
-              "name": "花瓣沙"
+              "name": "花瓣沙",
+              "nameEn": "Petal Sand"
             }
           ],
           "objectPosition": "30% center"
@@ -403,27 +453,32 @@
             {
               "hex": "#C9A830",
               "weight": 0.3,
-              "name": "金箔黄"
+              "name": "金箔黄",
+              "nameEn": "Gold Leaf Yellow"
             },
             {
               "hex": "#8B6914",
               "weight": 0.25,
-              "name": "深金色"
+              "name": "深金色",
+              "nameEn": "Deep Gold"
             },
             {
               "hex": "#E8D060",
               "weight": 0.2,
-              "name": "明金色"
+              "name": "明金色",
+              "nameEn": "Bright Gold"
             },
             {
               "hex": "#3D5C2E",
               "weight": 0.15,
-              "name": "花丛绿"
+              "name": "花丛绿",
+              "nameEn": "Meadow Green"
             },
             {
               "hex": "#6B4E14",
               "weight": 0.1,
-              "name": "铜褐色"
+              "name": "铜褐色",
+              "nameEn": "Bronze Brown"
             }
           ],
           "objectPosition": "center 20%"
@@ -441,27 +496,32 @@
             {
               "hex": "#C85A4E",
               "weight": 0.3,
-              "name": "朱砂红"
+              "name": "朱砂红",
+              "nameEn": "Cinnabar Red"
             },
             {
               "hex": "#E8D0B0",
               "weight": 0.25,
-              "name": "绢底米"
+              "name": "绢底米",
+              "nameEn": "Silk Ground Beige"
             },
             {
               "hex": "#4A7A5E",
               "weight": 0.2,
-              "name": "石绿色"
+              "name": "石绿色",
+              "nameEn": "Malachite Green"
             },
             {
               "hex": "#8B5E3A",
               "weight": 0.15,
-              "name": "赭石色"
+              "name": "赭石色",
+              "nameEn": "Ochre"
             },
             {
               "hex": "#F5E8D0",
               "weight": 0.1,
-              "name": "肤白色"
+              "name": "肤白色",
+              "nameEn": "Pale Skin"
             }
           ]
         }
@@ -470,7 +530,7 @@
     {
       "round": 4,
       "theme": "室内",
-      "themeEn": "Interiors",
+      "themeEn": "Interior",
       "paintings": [
         {
           "id": "r4_fresh",
@@ -485,27 +545,32 @@
             {
               "hex": "#8A8D92",
               "weight": 0.3,
-              "name": "灰墙色"
+              "name": "灰墙色",
+              "nameEn": "Wall Grey"
             },
             {
               "hex": "#2C2A28",
               "weight": 0.25,
-              "name": "黑裙色"
+              "name": "黑裙色",
+              "nameEn": "Dress Black"
             },
             {
               "hex": "#6E5A42",
               "weight": 0.2,
-              "name": "柜木褐"
+              "name": "柜木褐",
+              "nameEn": "Cabinet Brown"
             },
             {
               "hex": "#B0B2B5",
               "weight": 0.15,
-              "name": "银灰色"
+              "name": "银灰色",
+              "nameEn": "Silver Grey"
             },
             {
               "hex": "#D0D0CE",
               "weight": 0.1,
-              "name": "瓷白色"
+              "name": "瓷白色",
+              "nameEn": "Porcelain White"
             }
           ]
         },
@@ -522,27 +587,32 @@
             {
               "hex": "#0E0C0A",
               "weight": 0.3,
-              "name": "绝对黑"
+              "name": "绝对黑",
+              "nameEn": "Absolute Black"
             },
             {
               "hex": "#1E3A5A",
               "weight": 0.25,
-              "name": "深夜蓝"
+              "name": "深夜蓝",
+              "nameEn": "Midnight Blue"
             },
             {
               "hex": "#6AA0B8",
               "weight": 0.2,
-              "name": "地板蓝"
+              "name": "地板蓝",
+              "nameEn": "Floor Blue"
             },
             {
               "hex": "#C8A858",
               "weight": 0.15,
-              "name": "发光晕"
+              "name": "发光晕",
+              "nameEn": "Glow Halo"
             },
             {
               "hex": "#8B3030",
               "weight": 0.1,
-              "name": "椅腿红"
+              "name": "椅腿红",
+              "nameEn": "Chair Red"
             }
           ],
           "objectPosition": "center 30%"
@@ -560,27 +630,32 @@
             {
               "hex": "#D4896A",
               "weight": 0.3,
-              "name": "暖肤色"
+              "name": "暖肤色",
+              "nameEn": "Warm Skin"
             },
             {
               "hex": "#7A9BA5",
               "weight": 0.25,
-              "name": "墙影灰蓝"
+              "name": "墙影灰蓝",
+              "nameEn": "Shadowed Wall Blue"
             },
             {
               "hex": "#C0D0B0",
               "weight": 0.2,
-              "name": "晨光绿"
+              "name": "晨光绿",
+              "nameEn": "Morning Light Green"
             },
             {
               "hex": "#E8C8A0",
               "weight": 0.15,
-              "name": "日照米"
+              "name": "日照米",
+              "nameEn": "Sunlit Beige"
             },
             {
               "hex": "#2A5A6A",
               "weight": 0.1,
-              "name": "窗框青"
+              "name": "窗框青",
+              "nameEn": "Window Frame Blue"
             }
           ]
         },
@@ -597,27 +672,32 @@
             {
               "hex": "#D84A5A",
               "weight": 0.3,
-              "name": "绯红格"
+              "name": "绯红格",
+              "nameEn": "Crimson Check"
             },
             {
               "hex": "#F0E0D0",
               "weight": 0.25,
-              "name": "肌肤白"
+              "name": "肌肤白",
+              "nameEn": "Fair Skin"
             },
             {
               "hex": "#1A1A2E",
               "weight": 0.2,
-              "name": "发墨色"
+              "name": "发墨色",
+              "nameEn": "Hair Ink Black"
             },
             {
               "hex": "#E8A870",
               "weight": 0.15,
-              "name": "暖肌色"
+              "name": "暖肌色",
+              "nameEn": "Warm Skin Tone"
             },
             {
               "hex": "#FFFFFF",
               "weight": 0.1,
-              "name": "和纸白"
+              "name": "和纸白",
+              "nameEn": "Washi White"
             }
           ],
           "objectPosition": "center 30%"
@@ -642,27 +722,32 @@
             {
               "hex": "#C8C0B0",
               "weight": 0.3,
-              "name": "灰米色"
+              "name": "灰米色",
+              "nameEn": "Grey Beige"
             },
             {
               "hex": "#E8E0D4",
               "weight": 0.25,
-              "name": "奶白色"
+              "name": "奶白色",
+              "nameEn": "Cream White"
             },
             {
               "hex": "#4A5A7A",
               "weight": 0.2,
-              "name": "灰蓝瓶"
+              "name": "灰蓝瓶",
+              "nameEn": "Slate Blue Vase"
             },
             {
               "hex": "#A0988A",
               "weight": 0.15,
-              "name": "暖灰色"
+              "name": "暖灰色",
+              "nameEn": "Warm Grey"
             },
             {
               "hex": "#D8C8A8",
               "weight": 0.1,
-              "name": "沙黄色"
+              "name": "沙黄色",
+              "nameEn": "Sand Yellow"
             }
           ]
         },
@@ -679,27 +764,32 @@
             {
               "hex": "#0A0A0A",
               "weight": 0.3,
-              "name": "漆黑底"
+              "name": "漆黑底",
+              "nameEn": "Pitch Black"
             },
             {
               "hex": "#C8D0D8",
               "weight": 0.25,
-              "name": "白布灰"
+              "name": "白布灰",
+              "nameEn": "Linen Grey"
             },
             {
               "hex": "#D08070",
               "weight": 0.2,
-              "name": "花瓣粉"
+              "name": "花瓣粉",
+              "nameEn": "Petal Pink"
             },
             {
               "hex": "#E07030",
               "weight": 0.15,
-              "name": "果实橙"
+              "name": "果实橙",
+              "nameEn": "Fruit Orange"
             },
             {
               "hex": "#4A8A7A",
               "weight": 0.1,
-              "name": "瓶身青"
+              "name": "瓶身青",
+              "nameEn": "Vase Teal"
             }
           ]
         },
@@ -716,27 +806,32 @@
             {
               "hex": "#D85A30",
               "weight": 0.3,
-              "name": "橘红色"
+              "name": "橘红色",
+              "nameEn": "Tangerine Red"
             },
             {
               "hex": "#E8C060",
               "weight": 0.25,
-              "name": "暖果黄"
+              "name": "暖果黄",
+              "nameEn": "Warm Fruit Yellow"
             },
             {
               "hex": "#4A6A4A",
               "weight": 0.2,
-              "name": "叶片绿"
+              "name": "叶片绿",
+              "nameEn": "Leaf Green"
             },
             {
               "hex": "#8B6040",
               "weight": 0.15,
-              "name": "桌布褐"
+              "name": "桌布褐",
+              "nameEn": "Tablecloth Brown"
             },
             {
               "hex": "#F0E0C8",
               "weight": 0.1,
-              "name": "白瓷色"
+              "name": "白瓷色",
+              "nameEn": "White Porcelain"
             }
           ]
         },
@@ -753,27 +848,32 @@
             {
               "hex": "#C43040",
               "weight": 0.3,
-              "name": "洋红樱桃"
+              "name": "洋红樱桃",
+              "nameEn": "Carmine Cherry"
             },
             {
               "hex": "#F5EDE0",
               "weight": 0.25,
-              "name": "宣纸白"
+              "name": "宣纸白",
+              "nameEn": "Rice Paper White"
             },
             {
               "hex": "#2A2A2A",
               "weight": 0.2,
-              "name": "墨色"
+              "name": "墨色",
+              "nameEn": "Ink Black"
             },
             {
               "hex": "#6A8A4A",
               "weight": 0.15,
-              "name": "枝叶绿"
+              "name": "枝叶绿",
+              "nameEn": "Foliage Green"
             },
             {
               "hex": "#E8B8A0",
               "weight": 0.1,
-              "name": "淡赭色"
+              "name": "淡赭色",
+              "nameEn": "Pale Ochre"
             }
           ]
         }
@@ -783,23 +883,31 @@
   "personalities": {
     "fresh": {
       "name": "自然诗意",
+      "nameEn": "Natural Poetic",
       "icon": "🌿",
-      "description": "你被光影柔和、色调清新的画作吸引。莫奈花园里的宁静、维米尔笔下的柔光，都是你的色彩语言。"
+      "description": "你被光影柔和、色调清新的画作吸引。莫奈花园里的宁静、维米尔笔下的柔光，都是你的色彩语言。",
+      "descriptionEn": "You're drawn to paintings with soft light and fresh, clear tones. The serenity of Monet's garden and the gentle glow of Vermeer's brush are your color language."
     },
     "dark": {
       "name": "深邃浪漫",
+      "nameEn": "Deep Romantic",
       "icon": "🌙",
-      "description": "你偏爱有故事感的深色调，神秘而有力量。梵高的星空、斯皮利亚特的暗夜，是属于你的戏剧性美学。"
+      "description": "你偏爱有故事感的深色调，神秘而有力量。梵高的星空、斯皮利亚特的暗夜，是属于你的戏剧性美学。",
+      "descriptionEn": "You favor deep tones full of narrative — mysterious and powerful. Van Gogh's starry sky and Spilliaert's dark nights are the dramatic beauty that's yours."
     },
     "warm": {
       "name": "复古温暖",
+      "nameEn": "Vintage Warmth",
       "icon": "☕",
-      "description": "你喜欢温暖、怀旧的色调，像老照片和午后阳光。克里姆特的金色、霍珀的晨光让你着迷。"
+      "description": "你喜欢温暖、怀旧的色调，像老照片和午后阳光。克里姆特的金色、霍珀的晨光让你着迷。",
+      "descriptionEn": "You love warm, nostalgic tones — like old photographs and afternoon sun. Klimt's gold and Hopper's morning light captivate you."
     },
     "east": {
       "name": "东方意境",
+      "nameEn": "Eastern Reverie",
       "icon": "🎐",
-      "description": "你被东方艺术的留白与意境打动。浮世绘的浪花、水墨画的山水，是你心中的诗意远方。"
+      "description": "你被东方艺术的留白与意境打动。浮世绘的浪花、水墨画的山水，是你心中的诗意远方。",
+      "descriptionEn": "You're moved by the negative space and lyrical mood of Eastern art. The waves of ukiyo-e and the landscapes of ink painting are the poetic distance you long for."
     }
   },
   "config": {
