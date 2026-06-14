@@ -1,0 +1,818 @@
+{
+  "rounds": [
+    {
+      "round": 1,
+      "theme": "花卉",
+      "themeEn": "Flowers",
+      "paintings": [
+        {
+          "id": "r1_fresh",
+          "filename": "Monet_lilies.jpg",
+          "name": "睡莲",
+          "nameEn": "Water Lilies",
+          "artist": "莫奈",
+          "artistEn": "Claude Monet",
+          "year": "1906",
+          "personality": "fresh",
+          "colors": [
+            {
+              "hex": "#5E8C6A",
+              "weight": 0.3,
+              "name": "莲叶绿"
+            },
+            {
+              "hex": "#A7C5BD",
+              "weight": 0.25,
+              "name": "水面青"
+            },
+            {
+              "hex": "#D4A8C0",
+              "weight": 0.2,
+              "name": "睡莲粉"
+            },
+            {
+              "hex": "#3B6B5E",
+              "weight": 0.15,
+              "name": "深潭绿"
+            },
+            {
+              "hex": "#E8DDD0",
+              "weight": 0.1,
+              "name": "晨雾白"
+            }
+          ]
+        },
+        {
+          "id": "r1_dark",
+          "filename": "Still_Life_with_Flowers.jpg",
+          "name": "花卉静物",
+          "nameEn": "Still Life with Flowers",
+          "artist": "瑞秋·勒伊斯",
+          "artistEn": "Rachel Ruysch",
+          "year": "1700",
+          "personality": "dark",
+          "colors": [
+            {
+              "hex": "#1A1410",
+              "weight": 0.3,
+              "name": "深夜黑"
+            },
+            {
+              "hex": "#8B2E3B",
+              "weight": 0.25,
+              "name": "暗红玫瑰"
+            },
+            {
+              "hex": "#C9956A",
+              "weight": 0.2,
+              "name": "枯金色"
+            },
+            {
+              "hex": "#4A3028",
+              "weight": 0.15,
+              "name": "焦褐色"
+            },
+            {
+              "hex": "#D4B8A0",
+              "weight": 0.1,
+              "name": "古象牙"
+            }
+          ]
+        },
+        {
+          "id": "r1_warm",
+          "filename": "sunflowers.jpg",
+          "name": "向日葵",
+          "nameEn": "Sunflowers",
+          "artist": "梵高",
+          "artistEn": "Vincent van Gogh",
+          "year": "1888",
+          "personality": "warm",
+          "colors": [
+            {
+              "hex": "#E8B828",
+              "weight": 0.3,
+              "name": "向日葵黄"
+            },
+            {
+              "hex": "#C17F24",
+              "weight": 0.25,
+              "name": "花蕊橙"
+            },
+            {
+              "hex": "#F4D03F",
+              "weight": 0.2,
+              "name": "柠金色"
+            },
+            {
+              "hex": "#8B5E34",
+              "weight": 0.15,
+              "name": "枝干褐"
+            },
+            {
+              "hex": "#3D6B4F",
+              "weight": 0.1,
+              "name": "叶片绿"
+            }
+          ]
+        },
+        {
+          "id": "r1_east",
+          "filename": "Irises_screen.jpg",
+          "name": "燕子花图屏风",
+          "nameEn": "Irises Screen",
+          "artist": "尾形光琳",
+          "artistEn": "Ogata Kōrin",
+          "year": "1701",
+          "personality": "east",
+          "colors": [
+            {
+              "hex": "#C5A44E",
+              "weight": 0.3,
+              "name": "金箔色"
+            },
+            {
+              "hex": "#3A4F9E",
+              "weight": 0.25,
+              "name": "群青蓝"
+            },
+            {
+              "hex": "#4D7A3E",
+              "weight": 0.2,
+              "name": "菖蒲绿"
+            },
+            {
+              "hex": "#6B5BAE",
+              "weight": 0.15,
+              "name": "花瓣紫"
+            },
+            {
+              "hex": "#D4C28A",
+              "weight": 0.1,
+              "name": "老金色"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "theme": "风景",
+      "themeEn": "Landscapes",
+      "paintings": [
+        {
+          "id": "r2_fresh",
+          "filename": "Fine_Wind_Clear_Morning.jpg",
+          "name": "凯风快晴",
+          "nameEn": "Fine Wind, Clear Morning",
+          "artist": "葛饰北斋",
+          "artistEn": "Katsushika Hokusai",
+          "year": "1831",
+          "personality": "fresh",
+          "colors": [
+            {
+              "hex": "#B8432F",
+              "weight": 0.3,
+              "name": "赤富士"
+            },
+            {
+              "hex": "#6BA3C7",
+              "weight": 0.25,
+              "name": "晴空蓝"
+            },
+            {
+              "hex": "#F5ECD7",
+              "weight": 0.2,
+              "name": "云白色"
+            },
+            {
+              "hex": "#2D5A3E",
+              "weight": 0.15,
+              "name": "树海绿"
+            },
+            {
+              "hex": "#E8D5B0",
+              "weight": 0.1,
+              "name": "薄云黄"
+            }
+          ]
+        },
+        {
+          "id": "r2_dark",
+          "filename": "Starry_Night.jpg",
+          "name": "星夜",
+          "nameEn": "The Starry Night",
+          "artist": "梵高",
+          "artistEn": "Vincent van Gogh",
+          "year": "1889",
+          "personality": "dark",
+          "colors": [
+            {
+              "hex": "#1A3A5C",
+              "weight": 0.3,
+              "name": "深夜蓝"
+            },
+            {
+              "hex": "#3B6998",
+              "weight": 0.25,
+              "name": "旋涡蓝"
+            },
+            {
+              "hex": "#F4D03F",
+              "weight": 0.2,
+              "name": "星光黄"
+            },
+            {
+              "hex": "#2E5A1C",
+              "weight": 0.15,
+              "name": "柏树绿"
+            },
+            {
+              "hex": "#0D2137",
+              "weight": 0.1,
+              "name": "天际黑"
+            }
+          ]
+        },
+        {
+          "id": "r2_warm",
+          "filename": "impression-sunrise.jpg",
+          "name": "日出·印象",
+          "nameEn": "Impression, Sunrise",
+          "artist": "莫奈",
+          "artistEn": "Claude Monet",
+          "year": "1872",
+          "personality": "warm",
+          "colors": [
+            {
+              "hex": "#E87D38",
+              "weight": 0.3,
+              "name": "日出橙"
+            },
+            {
+              "hex": "#6B8FAD",
+              "weight": 0.25,
+              "name": "雾港蓝"
+            },
+            {
+              "hex": "#94AFC5",
+              "weight": 0.2,
+              "name": "晨雾灰蓝"
+            },
+            {
+              "hex": "#F5C77E",
+              "weight": 0.15,
+              "name": "金辉色"
+            },
+            {
+              "hex": "#2C4A62",
+              "weight": 0.1,
+              "name": "远帆黑蓝"
+            }
+          ]
+        },
+        {
+          "id": "r2_east",
+          "filename": "One-Thousand-Li-of-Rivers-and-Mountains.jpg",
+          "name": "千里江山图",
+          "nameEn": "A Thousand Li of Rivers and Mountains",
+          "artist": "王希孟",
+          "artistEn": "Wang Ximeng",
+          "year": "1113",
+          "personality": "east",
+          "colors": [
+            {
+              "hex": "#2A7A6A",
+              "weight": 0.3,
+              "name": "石青色"
+            },
+            {
+              "hex": "#4A9B8A",
+              "weight": 0.25,
+              "name": "青绿山"
+            },
+            {
+              "hex": "#C9D8B0",
+              "weight": 0.2,
+              "name": "远山黄绿"
+            },
+            {
+              "hex": "#1A4A3A",
+              "weight": 0.15,
+              "name": "深谷绿"
+            },
+            {
+              "hex": "#E8D8C0",
+              "weight": 0.1,
+              "name": "绢本米"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "theme": "人物",
+      "themeEn": "Portraits",
+      "paintings": [
+        {
+          "id": "r3_fresh",
+          "filename": "Girl_with_a_Pearl_Earring.jpg",
+          "name": "戴珍珠耳环的少女",
+          "nameEn": "Girl with a Pearl Earring",
+          "artist": "维米尔",
+          "artistEn": "Johannes Vermeer",
+          "year": "1665",
+          "personality": "fresh",
+          "colors": [
+            {
+              "hex": "#4A6B8A",
+              "weight": 0.3,
+              "name": "头巾蓝"
+            },
+            {
+              "hex": "#E8D4A8",
+              "weight": 0.25,
+              "name": "肌肤金"
+            },
+            {
+              "hex": "#1A2A3A",
+              "weight": 0.2,
+              "name": "暗夜底"
+            },
+            {
+              "hex": "#C9B078",
+              "weight": 0.15,
+              "name": "暖光黄"
+            },
+            {
+              "hex": "#F0E8D8",
+              "weight": 0.1,
+              "name": "珍珠白"
+            }
+          ]
+        },
+        {
+          "id": "r3_dark",
+          "filename": "Ophelia.jpg",
+          "name": "奥菲莉亚",
+          "nameEn": "Ophelia",
+          "artist": "米莱",
+          "artistEn": "John Everett Millais",
+          "year": "1852",
+          "personality": "dark",
+          "colors": [
+            {
+              "hex": "#2D4A3E",
+              "weight": 0.3,
+              "name": "沼泽绿"
+            },
+            {
+              "hex": "#4A6B5A",
+              "weight": 0.25,
+              "name": "水草青"
+            },
+            {
+              "hex": "#8B6F5C",
+              "weight": 0.2,
+              "name": "浮木褐"
+            },
+            {
+              "hex": "#3D5C4A",
+              "weight": 0.15,
+              "name": "幽潭暗绿"
+            },
+            {
+              "hex": "#C9A882",
+              "weight": 0.1,
+              "name": "花瓣沙"
+            }
+          ],
+          "objectPosition": "30% center"
+        },
+        {
+          "id": "r3_warm",
+          "filename": "The-Kiss.jpg",
+          "name": "吻",
+          "nameEn": "The Kiss",
+          "artist": "克里姆特",
+          "artistEn": "Gustav Klimt",
+          "year": "1908",
+          "personality": "warm",
+          "colors": [
+            {
+              "hex": "#C9A830",
+              "weight": 0.3,
+              "name": "金箔黄"
+            },
+            {
+              "hex": "#8B6914",
+              "weight": 0.25,
+              "name": "深金色"
+            },
+            {
+              "hex": "#E8D060",
+              "weight": 0.2,
+              "name": "明金色"
+            },
+            {
+              "hex": "#3D5C2E",
+              "weight": 0.15,
+              "name": "花丛绿"
+            },
+            {
+              "hex": "#6B4E14",
+              "weight": 0.1,
+              "name": "铜褐色"
+            }
+          ],
+          "objectPosition": "center 20%"
+        },
+        {
+          "id": "r3_east",
+          "filename": "Court_Ladies.webp",
+          "name": "簪花仕女图",
+          "nameEn": "Court Ladies Adorning Their Hair with Flowers",
+          "artist": "周昉",
+          "artistEn": "Zhou Fang",
+          "year": "780",
+          "personality": "east",
+          "colors": [
+            {
+              "hex": "#C85A4E",
+              "weight": 0.3,
+              "name": "朱砂红"
+            },
+            {
+              "hex": "#E8D0B0",
+              "weight": 0.25,
+              "name": "绢底米"
+            },
+            {
+              "hex": "#4A7A5E",
+              "weight": 0.2,
+              "name": "石绿色"
+            },
+            {
+              "hex": "#8B5E3A",
+              "weight": 0.15,
+              "name": "赭石色"
+            },
+            {
+              "hex": "#F5E8D0",
+              "weight": 0.1,
+              "name": "肤白色"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "theme": "室内",
+      "themeEn": "Interiors",
+      "paintings": [
+        {
+          "id": "r4_fresh",
+          "filename": "Interior_with_Young_Women.jpg",
+          "name": "室内与年轻女子",
+          "nameEn": "Interior with Young Woman Seen from the Back",
+          "artist": "哈莫修依",
+          "artistEn": "Vilhelm Hammershøi",
+          "year": "1904",
+          "personality": "fresh",
+          "colors": [
+            {
+              "hex": "#8A8D92",
+              "weight": 0.3,
+              "name": "灰墙色"
+            },
+            {
+              "hex": "#2C2A28",
+              "weight": 0.25,
+              "name": "黑裙色"
+            },
+            {
+              "hex": "#6E5A42",
+              "weight": 0.2,
+              "name": "柜木褐"
+            },
+            {
+              "hex": "#B0B2B5",
+              "weight": 0.15,
+              "name": "银灰色"
+            },
+            {
+              "hex": "#D0D0CE",
+              "weight": 0.1,
+              "name": "瓷白色"
+            }
+          ]
+        },
+        {
+          "id": "r4_dark",
+          "filename": "A_Waiting_Woman.jpg",
+          "name": "等待的女人",
+          "nameEn": "A Waiting Woman",
+          "artist": "斯皮利亚特",
+          "artistEn": "Léon Spilliaert",
+          "year": "1909",
+          "personality": "dark",
+          "colors": [
+            {
+              "hex": "#0E0C0A",
+              "weight": 0.3,
+              "name": "绝对黑"
+            },
+            {
+              "hex": "#1E3A5A",
+              "weight": 0.25,
+              "name": "深夜蓝"
+            },
+            {
+              "hex": "#6AA0B8",
+              "weight": 0.2,
+              "name": "地板蓝"
+            },
+            {
+              "hex": "#C8A858",
+              "weight": 0.15,
+              "name": "发光晕"
+            },
+            {
+              "hex": "#8B3030",
+              "weight": 0.1,
+              "name": "椅腿红"
+            }
+          ],
+          "objectPosition": "center 30%"
+        },
+        {
+          "id": "r4_warm",
+          "filename": "Morning_Sun.jpg",
+          "name": "晨光",
+          "nameEn": "Morning Sun",
+          "artist": "霍珀",
+          "artistEn": "Edward Hopper",
+          "year": "1952",
+          "personality": "warm",
+          "colors": [
+            {
+              "hex": "#D4896A",
+              "weight": 0.3,
+              "name": "暖肤色"
+            },
+            {
+              "hex": "#7A9BA5",
+              "weight": 0.25,
+              "name": "墙影灰蓝"
+            },
+            {
+              "hex": "#C0D0B0",
+              "weight": 0.2,
+              "name": "晨光绿"
+            },
+            {
+              "hex": "#E8C8A0",
+              "weight": 0.15,
+              "name": "日照米"
+            },
+            {
+              "hex": "#2A5A6A",
+              "weight": 0.1,
+              "name": "窗框青"
+            }
+          ]
+        },
+        {
+          "id": "r4_east",
+          "filename": "Woman_with_an_Under_Sash.jpg",
+          "name": "腰巻の女",
+          "nameEn": "Woman with an Under Sash",
+          "artist": "伊东深水",
+          "artistEn": "Itō Shinsui",
+          "year": "1921",
+          "personality": "east",
+          "colors": [
+            {
+              "hex": "#D84A5A",
+              "weight": 0.3,
+              "name": "绯红格"
+            },
+            {
+              "hex": "#F0E0D0",
+              "weight": 0.25,
+              "name": "肌肤白"
+            },
+            {
+              "hex": "#1A1A2E",
+              "weight": 0.2,
+              "name": "发墨色"
+            },
+            {
+              "hex": "#E8A870",
+              "weight": 0.15,
+              "name": "暖肌色"
+            },
+            {
+              "hex": "#FFFFFF",
+              "weight": 0.1,
+              "name": "和纸白"
+            }
+          ],
+          "objectPosition": "center 30%"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "theme": "静物",
+      "themeEn": "Still Life",
+      "paintings": [
+        {
+          "id": "r5_fresh",
+          "filename": "Still_Life_Morandi.jpg",
+          "name": "静物",
+          "nameEn": "Still Life",
+          "artist": "莫兰迪",
+          "artistEn": "Giorgio Morandi",
+          "year": "1956",
+          "personality": "fresh",
+          "colors": [
+            {
+              "hex": "#C8C0B0",
+              "weight": 0.3,
+              "name": "灰米色"
+            },
+            {
+              "hex": "#E8E0D4",
+              "weight": 0.25,
+              "name": "奶白色"
+            },
+            {
+              "hex": "#4A5A7A",
+              "weight": 0.2,
+              "name": "灰蓝瓶"
+            },
+            {
+              "hex": "#A0988A",
+              "weight": 0.15,
+              "name": "暖灰色"
+            },
+            {
+              "hex": "#D8C8A8",
+              "weight": 0.1,
+              "name": "沙黄色"
+            }
+          ]
+        },
+        {
+          "id": "r5_dark",
+          "filename": "Tulips_Peploe.jpg",
+          "name": "郁金香",
+          "nameEn": "Tulips and Fruit",
+          "artist": "佩普洛",
+          "artistEn": "Samuel Peploe",
+          "year": "1919",
+          "personality": "dark",
+          "colors": [
+            {
+              "hex": "#0A0A0A",
+              "weight": 0.3,
+              "name": "漆黑底"
+            },
+            {
+              "hex": "#C8D0D8",
+              "weight": 0.25,
+              "name": "白布灰"
+            },
+            {
+              "hex": "#D08070",
+              "weight": 0.2,
+              "name": "花瓣粉"
+            },
+            {
+              "hex": "#E07030",
+              "weight": 0.15,
+              "name": "果实橙"
+            },
+            {
+              "hex": "#4A8A7A",
+              "weight": 0.1,
+              "name": "瓶身青"
+            }
+          ]
+        },
+        {
+          "id": "r5_warm",
+          "filename": "Apples_Cezanne.jpg",
+          "name": "苹果与橘子",
+          "nameEn": "Apples and Oranges",
+          "artist": "塞尚",
+          "artistEn": "Paul Cézanne",
+          "year": "1899",
+          "personality": "warm",
+          "colors": [
+            {
+              "hex": "#D85A30",
+              "weight": 0.3,
+              "name": "橘红色"
+            },
+            {
+              "hex": "#E8C060",
+              "weight": 0.25,
+              "name": "暖果黄"
+            },
+            {
+              "hex": "#4A6A4A",
+              "weight": 0.2,
+              "name": "叶片绿"
+            },
+            {
+              "hex": "#8B6040",
+              "weight": 0.15,
+              "name": "桌布褐"
+            },
+            {
+              "hex": "#F0E0C8",
+              "weight": 0.1,
+              "name": "白瓷色"
+            }
+          ]
+        },
+        {
+          "id": "r5_east",
+          "filename": "red_cherries.jpeg",
+          "name": "樱桃",
+          "nameEn": "Red Cherries",
+          "artist": "齐白石",
+          "artistEn": "Qi Baishi",
+          "year": "1940s",
+          "personality": "east",
+          "colors": [
+            {
+              "hex": "#C43040",
+              "weight": 0.3,
+              "name": "洋红樱桃"
+            },
+            {
+              "hex": "#F5EDE0",
+              "weight": 0.25,
+              "name": "宣纸白"
+            },
+            {
+              "hex": "#2A2A2A",
+              "weight": 0.2,
+              "name": "墨色"
+            },
+            {
+              "hex": "#6A8A4A",
+              "weight": 0.15,
+              "name": "枝叶绿"
+            },
+            {
+              "hex": "#E8B8A0",
+              "weight": 0.1,
+              "name": "淡赭色"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "personalities": {
+    "fresh": {
+      "name": "自然诗意",
+      "icon": "🌿",
+      "description": "你被光影柔和、色调清新的画作吸引。莫奈花园里的宁静、维米尔笔下的柔光，都是你的色彩语言。"
+    },
+    "dark": {
+      "name": "深邃浪漫",
+      "icon": "🌙",
+      "description": "你偏爱有故事感的深色调，神秘而有力量。梵高的星空、斯皮利亚特的暗夜，是属于你的戏剧性美学。"
+    },
+    "warm": {
+      "name": "复古温暖",
+      "icon": "☕",
+      "description": "你喜欢温暖、怀旧的色调，像老照片和午后阳光。克里姆特的金色、霍珀的晨光让你着迷。"
+    },
+    "east": {
+      "name": "东方意境",
+      "icon": "🎐",
+      "description": "你被东方艺术的留白与意境打动。浮世绘的浪花、水墨画的山水，是你心中的诗意远方。"
+    }
+  },
+  "config": {
+    "roundsTotal": 5,
+    "choicesPerRound": 4,
+    "colorsPerPalette": 5,
+    "maxRerollsPerColor": 3,
+    "harmonyCheck": {
+      "minHueDifference": 15
+    },
+    "personalityResolution": {
+      "method": "majority",
+      "tiebreaker": "last_round"
+    }
+  }
+}

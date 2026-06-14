@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+raw-images/
+
+# claude code local agent state
+# (worktrees/ is a live git worktree and can't be committed; settings are machine-local)
+.claude/
