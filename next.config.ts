@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Hide the on-screen dev indicator (it never ships to production anyway).
+  devIndicators: false,
 };
 
 export default nextConfig;
