@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export interface PaintingCardProps {
   filename: string;
@@ -38,15 +39,25 @@ export function PaintingCard({
   const [loaded, setLoaded] = useState(false);
   const src = `/paintings/${filename}`;
   const zhSubtitle = [name, artist].filter(Boolean).join(" · ");
+  const interactive = Boolean(onClick);
 
   return (
-    <button
+    <motion.button
       type="button"
       onClick={onClick}
-      className={`group relative ${aspectClassName} w-full overflow-hidden rounded-lg bg-neutral-200 transition-all duration-300 ${
-        selected ? "ring-2 ring-neutral-900 ring-offset-2" : ""
+      // framer owns the transform (hover lift + tap "press"); CSS owns the
+      // shadow / dim / selection ring, so the two never fight over `transform`.
+      whileHover={interactive ? { scale: 1.02 } : undefined}
+      whileTap={interactive ? { scale: 0.98 } : undefined}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+      className={`relative ${aspectClassName} w-full overflow-hidden rounded-lg bg-neutral-200 transition-[box-shadow,opacity] duration-200 ease-out ${
+        selected
+          ? "shadow-[0_14px_36px_rgba(0,0,0,0.20)] ring-2 ring-[#c2884a] ring-offset-2 ring-offset-[#f8f7f6]"
+          : ""
       } ${dimmed ? "opacity-40" : "opacity-100"} ${
-        onClick ? "cursor-pointer hover:scale-[1.02]" : "cursor-default"
+        interactive
+          ? "cursor-pointer hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
+          : "cursor-default"
       }`}
       aria-label={artistEn ? `${nameEn} — ${artistEn}` : nameEn}
     >
@@ -72,6 +83,6 @@ export function PaintingCard({
           <div className="mt-0.5 text-[11px] opacity-70">{zhSubtitle}</div>
         )}
       </div>
-    </button>
+    </motion.button>
   );
 }

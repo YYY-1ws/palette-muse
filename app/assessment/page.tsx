@@ -27,12 +27,12 @@ export default function AssessmentPage() {
   }, []);
 
   if (!hydrated) {
-    return <div className="min-h-screen bg-neutral-50" />;
+    return <div className="min-h-screen bg-[#f8f7f6]" />;
   }
 
   if (showResumePrompt) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center bg-neutral-50 px-6 text-center">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-[#f8f7f6] px-6 text-center">
         <h2 className="text-xl font-medium text-neutral-900">
           You&apos;ve already completed the test
         </h2>
@@ -78,6 +78,8 @@ export default function AssessmentPage() {
       colors: p.colors,
       objectPosition: p.objectPosition,
     };
+    // Hold ~800ms so the user sees their selection acknowledged (press +
+    // warm highlight) before the round crossfades forward.
     setTimeout(() => {
       selectPainting(currentRound, painting);
       if (currentRound + 1 >= data.rounds.length) {
@@ -86,19 +88,31 @@ export default function AssessmentPage() {
       } else {
         setPendingId(null);
       }
-    }, 420);
+    }, 800);
   };
 
   return (
-    <main className="min-h-screen bg-neutral-50 py-10">
-      <RoundDisplay
-        roundIndex={currentRound}
-        total={data.rounds.length}
-        theme={round.themeEn}
-        paintings={round.paintings}
-        selectedId={pendingId}
-        onSelect={handleSelect}
+    <main className="relative min-h-screen overflow-hidden bg-[#f8f7f6] py-10">
+      {/* A 2.5% wash of the landing-page gallery photo keeps the mood continuous
+          from the moody landing into the quiz, without competing with the art. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 bg-cover opacity-[0.025]"
+        style={{
+          backgroundImage: "url('/black-bg.jpg')",
+          backgroundPosition: "center 40%",
+        }}
       />
+      <div className="relative z-10">
+        <RoundDisplay
+          roundIndex={currentRound}
+          total={data.rounds.length}
+          theme={round.themeEn}
+          paintings={round.paintings}
+          selectedId={pendingId}
+          onSelect={handleSelect}
+        />
+      </div>
     </main>
   );
 }

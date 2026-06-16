@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
 import { PaintingCard } from "./PaintingCard";
 import type { Painting } from "@/lib/types";
 
@@ -13,6 +13,21 @@ interface RoundDisplayProps {
   onSelect: (painting: Painting) => void;
 }
 
+// Each round's four cards fade + slide up with a ~100ms stagger, so a new round
+// feels like a fresh moment rather than a static swap.
+const gridVariants: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.08 },
+  },
+  exit: { opacity: 0, transition: { duration: 0.28, ease: "easeOut" } },
+};
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
+
 export function RoundDisplay({
   roundIndex,
   total,
@@ -21,59 +36,66 @@ export function RoundDisplay({
   selectedId,
   onSelect,
 }: RoundDisplayProps) {
+  const progress = ((roundIndex + 1) / total) * 100;
+
   return (
     <div className="mx-auto w-full max-w-4xl px-6 py-8">
-      <header className="mb-6 text-center">
-        <div className="text-xs uppercase tracking-widest text-neutral-400">
-          {roundIndex + 1} / {total} · {theme}
+      <header className="mb-8 text-center">
+        <div className="text-sm">
+          <span className="tracking-wider text-neutral-400">
+            {roundIndex + 1} / {total}
+          </span>
+          <span className="mx-2 text-neutral-300">·</span>
+          <span className="font-semibold uppercase tracking-[0.22em] text-neutral-700">
+            {theme}
+          </span>
         </div>
-        <h2 className="mt-2 text-2xl font-medium text-neutral-900">
+
+        {/* Progress bar — advances 20% per round (1/5 → 5/5). */}
+        <div className="mx-auto mt-3 h-1 w-full max-w-sm overflow-hidden rounded-full bg-[#e7e5e4]">
+          <motion.div
+            className="h-full rounded-full bg-[#1d1d1f]"
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          />
+        </div>
+
+        <h2 className="mt-5 text-2xl font-medium text-neutral-900">
           Choose your favorite
         </h2>
       </header>
 
+      {/* Crossfade between rounds: the old grid fades out, then the new one
+          staggers in (mode="wait"). */}
       <AnimatePresence mode="wait">
         <motion.div
           key={roundIndex}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -16 }}
-          transition={{ duration: 0.32, ease: "easeOut" }}
+          variants={gridVariants}
+          initial="hidden"
+          animate="show"
+          exit="exit"
           className="grid grid-cols-1 gap-4 md:grid-cols-2"
         >
           {paintings.map((p) => (
-            <PaintingCard
-              key={p.id}
-              filename={p.filename}
-              nameEn={p.nameEn}
-              name={p.name}
-              artistEn={p.artistEn}
-              artist={p.artist}
-              selected={selectedId === p.id}
-              dimmed={selectedId !== null && selectedId !== p.id}
-              onClick={selectedId ? undefined : () => onSelect(p)}
-              aspectClassName="aspect-[4/3]"
-              objectPosition={p.objectPosition}
-              eager
-            />
+            <motion.div key={p.id} variants={cardVariants}>
+              <PaintingCard
+                filename={p.filename}
+                nameEn={p.nameEn}
+                name={p.name}
+                artistEn={p.artistEn}
+                artist={p.artist}
+                selected={selectedId === p.id}
+                dimmed={selectedId !== null && selectedId !== p.id}
+                onClick={selectedId ? undefined : () => onSelect(p)}
+                aspectClassName="aspect-[4/3]"
+                objectPosition={p.objectPosition}
+                eager
+              />
+            </motion.div>
           ))}
         </motion.div>
       </AnimatePresence>
-
-      <div className="mt-8 flex justify-center gap-2">
-        {Array.from({ length: total }).map((_, i) => (
-          <div
-            key={i}
-            className={`h-1 w-8 rounded-full transition-colors ${
-              i < roundIndex
-                ? "bg-neutral-800"
-                : i === roundIndex
-                  ? "bg-neutral-500"
-                  : "bg-neutral-200"
-            }`}
-          />
-        ))}
-      </div>
     </div>
   );
 }
