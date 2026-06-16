@@ -3,9 +3,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { PaletteDisplay } from "@/components/PaletteDisplay";
 import { PersonalityResult } from "@/components/PersonalityResult";
+import { ShareModal } from "@/components/ShareModal";
 import { Toast } from "@/components/Toast";
 import { useAssessmentStore } from "@/lib/store";
 import {
@@ -31,6 +32,7 @@ export default function ResultPage() {
   } = useAssessmentStore();
   const [hydrated, setHydrated] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
+  const [shareOpen, setShareOpen] = useState(false);
 
   useEffect(() => {
     setHydrated(true);
@@ -176,7 +178,7 @@ export default function ResultPage() {
         <div className="mt-14 flex flex-wrap justify-center gap-3">
           <button
             type="button"
-            onClick={() => showToast("Share cards are coming soon")}
+            onClick={() => setShareOpen(true)}
             className="rounded-full bg-[#1d1d1f] px-6 py-2.5 text-sm font-medium text-white shadow-[0_2px_10px_rgba(0,0,0,0.12)] transition hover:bg-[#2c2c2e]"
           >
             Share my palette
@@ -195,6 +197,19 @@ export default function ResultPage() {
       </div>
 
       <Toast message={toast} />
+
+      <AnimatePresence>
+        {shareOpen && (
+          <ShareModal
+            personality={personality}
+            nameEn={personalityInfo.nameEn}
+            name={personalityInfo.name}
+            selections={selections}
+            palette={generatedPalette}
+            onClose={() => setShareOpen(false)}
+          />
+        )}
+      </AnimatePresence>
     </main>
   );
 }

@@ -13,11 +13,19 @@ const iconStroke: Record<Personality, string> = {
   east: "#3a6a5a", // muted teal — a mountain
 };
 
-function IconFrame({ stroke, children }: { stroke: string; children: ReactNode }) {
+function IconFrame({
+  stroke,
+  size = 46,
+  children,
+}: {
+  stroke: string;
+  size?: number;
+  children: ReactNode;
+}) {
   return (
     <svg
-      width="46"
-      height="46"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill="none"
       stroke={stroke}
@@ -32,32 +40,38 @@ function IconFrame({ stroke, children }: { stroke: string; children: ReactNode }
   );
 }
 
-function PersonalityIcon({ personality }: { personality: Personality }) {
+export function PersonalityIcon({
+  personality,
+  size = 46,
+}: {
+  personality: Personality;
+  size?: number;
+}) {
   const stroke = iconStroke[personality];
   switch (personality) {
     case "fresh": // leaf
       return (
-        <IconFrame stroke={stroke}>
+        <IconFrame stroke={stroke} size={size}>
           <path d="M12 2.5C16 6.5 16 14.5 12 21.5C8 14.5 8 6.5 12 2.5Z" />
           <path d="M12 4.8V19.2" />
         </IconFrame>
       );
     case "dark": // crescent moon
       return (
-        <IconFrame stroke={stroke}>
+        <IconFrame stroke={stroke} size={size}>
           <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" />
         </IconFrame>
       );
     case "warm": // sun
       return (
-        <IconFrame stroke={stroke}>
+        <IconFrame stroke={stroke} size={size}>
           <circle cx="12" cy="12" r="4.3" />
           <path d="M12 2.5V5M12 19V21.5M2.5 12H5M19 12H21.5M5.1 5.1l1.8 1.8M17.1 17.1l1.8 1.8M5.1 18.9l1.8-1.8M17.1 6.9l1.8-1.8" />
         </IconFrame>
       );
     case "east": // mountain
       return (
-        <IconFrame stroke={stroke}>
+        <IconFrame stroke={stroke} size={size}>
           <path d="M2.5 18.5 9 8.5l4 5.5 4.5-7 4 11.5" />
         </IconFrame>
       );
