@@ -11,6 +11,10 @@ interface RoundDisplayProps {
   paintings: Painting[];
   selectedId: string | null;
   onSelect: (painting: Painting) => void;
+  /** Step back one round (hidden on the first round). */
+  onBack?: () => void;
+  /** Id of the painting chosen here previously, when revisiting a round. */
+  previousId?: string | null;
 }
 
 // Each round's four cards fade + slide up with a ~100ms stagger, so a new round
@@ -35,13 +39,26 @@ export function RoundDisplay({
   paintings,
   selectedId,
   onSelect,
+  onBack,
+  previousId,
 }: RoundDisplayProps) {
   const progress = ((roundIndex + 1) / total) * 100;
 
   return (
     <div className="mx-auto w-full max-w-4xl px-6 py-8">
-      <header className="mb-8 text-center">
-        <div className="text-sm">
+      <div className="relative mb-8">
+        {onBack && roundIndex > 0 && (
+          <button
+            type="button"
+            onClick={onBack}
+            aria-label="Back to previous round"
+            className="absolute left-0 top-0.5 inline-flex items-center gap-1 text-sm text-neutral-400 transition hover:text-neutral-700"
+          >
+            <span aria-hidden>←</span> Back
+          </button>
+        )}
+        <header className="text-center">
+          <div className="text-sm">
           <span className="tracking-wider text-neutral-400">
             {roundIndex + 1} / {total}
           </span>
@@ -61,10 +78,11 @@ export function RoundDisplay({
           />
         </div>
 
-        <h2 className="mt-5 text-2xl font-medium text-neutral-900">
-          Choose your favorite
-        </h2>
-      </header>
+          <h2 className="mt-5 text-2xl font-medium text-neutral-900">
+            Choose your favorite
+          </h2>
+        </header>
+      </div>
 
       {/* Crossfade between rounds: the old grid fades out, then the new one
           staggers in (mode="wait"). */}
@@ -77,7 +95,7 @@ export function RoundDisplay({
           exit="exit"
           className="grid grid-cols-1 gap-4 md:grid-cols-2"
         >
-          {paintings.map((p) => (
+          {paintings.map((p, i) => (
             <motion.div key={p.id} variants={cardVariants}>
               <PaintingCard
                 filename={p.filename}
@@ -87,6 +105,8 @@ export function RoundDisplay({
                 artist={p.artist}
                 selected={selectedId === p.id}
                 dimmed={selectedId !== null && selectedId !== p.id}
+                previouslyPicked={!selectedId && p.id === previousId}
+                shortcut={i + 1}
                 onClick={selectedId ? undefined : () => onSelect(p)}
                 aspectClassName="aspect-[4/3]"
                 objectPosition={p.objectPosition}

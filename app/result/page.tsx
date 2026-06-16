@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { HomeLink } from "@/components/HomeLink";
 import { PaletteDisplay } from "@/components/PaletteDisplay";
 import { PersonalityResult } from "@/components/PersonalityResult";
 import { ShareModal } from "@/components/ShareModal";
@@ -111,6 +112,9 @@ export default function ResultPage() {
   return (
     <main className="min-h-screen bg-neutral-50 px-6 py-12">
       <div className="mx-auto max-w-5xl">
+        <div className="mb-8">
+          <HomeLink />
+        </div>
         <PersonalityResult
           personality={personality}
           nameEn={personalityInfo.nameEn}
@@ -191,7 +195,7 @@ export default function ResultPage() {
             }}
             className="rounded-full border border-neutral-300 bg-white px-6 py-2.5 text-sm text-neutral-700 transition hover:bg-neutral-100"
           >
-            Retake test
+            Retake quiz
           </button>
         </div>
       </div>

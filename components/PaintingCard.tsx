@@ -21,6 +21,10 @@ export interface PaintingCardProps {
   objectPosition?: string;
   /** Set for above-the-fold cards so the LCP image isn't lazy-loaded. */
   eager?: boolean;
+  /** 1-based number shown as a faint keyboard-shortcut chip (assessment). */
+  shortcut?: number;
+  /** Marks the card the user chose last time they were on this round. */
+  previouslyPicked?: boolean;
 }
 
 export function PaintingCard({
@@ -35,6 +39,8 @@ export function PaintingCard({
   aspectClassName = "aspect-[4/5]",
   objectPosition = "center center",
   eager = false,
+  shortcut,
+  previouslyPicked = false,
 }: PaintingCardProps) {
   const [loaded, setLoaded] = useState(false);
   const src = `/paintings/${filename}`;
@@ -53,7 +59,9 @@ export function PaintingCard({
       className={`relative ${aspectClassName} w-full overflow-hidden rounded-lg bg-neutral-200 transition-[box-shadow,opacity] duration-200 ease-out ${
         selected
           ? "shadow-[0_14px_36px_rgba(0,0,0,0.20)] ring-2 ring-[#c2884a] ring-offset-2 ring-offset-[#f8f7f6]"
-          : ""
+          : previouslyPicked
+            ? "ring-2 ring-neutral-400/80 ring-offset-2 ring-offset-[#f8f7f6]"
+            : ""
       } ${dimmed ? "opacity-40" : "opacity-100"} ${
         interactive
           ? "cursor-pointer hover:shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
@@ -63,6 +71,22 @@ export function PaintingCard({
     >
       {!loaded && (
         <div className="absolute inset-0 animate-pulse bg-neutral-200" />
+      )}
+      {shortcut !== undefined && (
+        <span
+          aria-hidden
+          className="absolute left-2 top-2 z-10 rounded-md bg-black/35 px-1.5 py-0.5 text-xs font-medium leading-none text-white/90 backdrop-blur-sm"
+        >
+          {shortcut}
+        </span>
+      )}
+      {previouslyPicked && !selected && (
+        <span
+          aria-hidden
+          className="absolute right-2 top-2 z-10 flex h-5 w-5 items-center justify-center rounded-full bg-white/90 text-[11px] text-neutral-700 shadow-sm"
+        >
+          ✓
+        </span>
       )}
       <Image
         src={src}

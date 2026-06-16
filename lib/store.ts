@@ -9,6 +9,8 @@ interface AssessmentState {
   selections: SelectedPainting[];
   generatedPalette: GeneratedColor[] | null;
   selectPainting: (round: number, painting: SelectedPainting) => void;
+  /** Move the round pointer (e.g. on Back) without clearing any selections. */
+  goToRound: (round: number) => void;
   setPalette: (palette: GeneratedColor[]) => void;
   updatePaletteColor: (
     index: number,
@@ -40,6 +42,10 @@ export const useAssessmentStore = create<AssessmentState>()(
             generatedPalette: null,
           };
         }),
+      goToRound: (round) =>
+        set((state) => ({
+          currentRound: Math.max(0, Math.min(round, state.selections.length)),
+        })),
       setPalette: (palette) => set({ generatedPalette: palette }),
       updatePaletteColor: (index, color) =>
         set((state) => {
