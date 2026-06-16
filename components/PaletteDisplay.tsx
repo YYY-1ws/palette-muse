@@ -32,9 +32,9 @@ export function PaletteDisplay({
         return (
           <motion.div
             key={`${i}-${color.hex}`}
-            initial={{ opacity: 0, rotateY: -12 }}
-            animate={{ opacity: 1, rotateY: 0 }}
-            transition={{ duration: 0.35, delay: i * 0.04 }}
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="group relative aspect-square overflow-hidden rounded-xl"
             style={{ backgroundColor: color.hex }}
           >

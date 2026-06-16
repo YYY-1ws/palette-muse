@@ -3,11 +3,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { PaletteDisplay } from "@/components/PaletteDisplay";
 import { PersonalityResult } from "@/components/PersonalityResult";
 import { Toast } from "@/components/Toast";
 import { useAssessmentStore } from "@/lib/store";
 import {
+  buildPersonalityDescription,
   determinePersonality,
   generatePalette,
   rerollColor,
@@ -55,6 +57,9 @@ export default function ResultPage() {
   }
 
   const personalityInfo = data.personalities[personality];
+  // Built from the user's actual selected artists — never names a painter they
+  // didn't choose (fixes the hardcoded-description trust issue).
+  const description = buildPersonalityDescription(personality, selections);
 
   const showToast = (msg: string) => {
     setToast(msg);
@@ -104,37 +109,57 @@ export default function ResultPage() {
   return (
     <main className="min-h-screen bg-neutral-50 px-6 py-12">
       <div className="mx-auto max-w-5xl">
-        <PersonalityResult info={personalityInfo} />
+        <PersonalityResult
+          personality={personality}
+          nameEn={personalityInfo.nameEn}
+          name={personalityInfo.name}
+          description={description}
+        />
 
-        <section className="mt-12">
-          <h3 className="mb-4 text-center text-xs uppercase tracking-widest text-neutral-400">
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
+          className="mt-12"
+        >
+          <h3 className="mb-5 text-center text-xs uppercase tracking-widest text-neutral-400">
             Your selected paintings
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-4">
             {selections.map((s) => (
-              <div key={s.id} className="w-24 text-center sm:w-28">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-neutral-200">
-                  <Image
-                    src={`/paintings/${s.filename}`}
-                    alt={s.nameEn ?? s.name}
-                    fill
-                    sizes="120px"
-                    className="object-cover"
-                    style={{ objectPosition: s.objectPosition ?? "center center" }}
-                  />
+              <div key={s.id} className="w-28 text-center sm:w-32">
+                {/* White-bordered, shadowed frame — a hung gallery print. */}
+                <div className="rounded-md bg-white p-1.5 shadow-[0_10px_28px_-8px_rgba(40,38,58,0.28)] ring-1 ring-black/[0.05]">
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-[3px] bg-neutral-200">
+                    <Image
+                      src={`/paintings/${s.filename}`}
+                      alt={s.nameEn ?? s.name}
+                      fill
+                      sizes="140px"
+                      className="object-cover"
+                      style={{
+                        objectPosition: s.objectPosition ?? "center center",
+                      }}
+                    />
+                  </div>
                 </div>
-                <div className="mt-1.5 text-[11px] font-medium text-neutral-700 leading-tight">
+                <div className="mt-2 text-[11px] font-medium leading-tight text-neutral-700">
                   {s.nameEn ?? s.name}
                 </div>
-                <div className="text-[10px] text-neutral-400 leading-tight">
+                <div className="text-[10px] leading-tight text-neutral-400">
                   {s.name}
                 </div>
               </div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
-        <section className="mt-14">
+        <motion.section
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.45, duration: 0.55, ease: "easeOut" }}
+          className="mt-14"
+        >
           <h3 className="mb-1 text-center text-xs uppercase tracking-widest text-neutral-400">
             Your personal palette
           </h3>
@@ -146,9 +171,16 @@ export default function ResultPage() {
             onCopy={handleCopy}
             onReroll={handleReroll}
           />
-        </section>
+        </motion.section>
 
-        <div className="mt-14 flex justify-center">
+        <div className="mt-14 flex flex-wrap justify-center gap-3">
+          <button
+            type="button"
+            onClick={() => showToast("Share cards are coming soon")}
+            className="rounded-full bg-[#1d1d1f] px-6 py-2.5 text-sm font-medium text-white shadow-[0_2px_10px_rgba(0,0,0,0.12)] transition hover:bg-[#2c2c2e]"
+          >
+            Share my palette
+          </button>
           <button
             type="button"
             onClick={() => {

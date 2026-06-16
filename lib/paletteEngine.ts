@@ -154,3 +154,49 @@ export function determinePersonality(
   }
   return winners[0];
 }
+
+const personalityOpenings: Record<Personality, string> = {
+  fresh: "You're drawn to paintings with soft light and fresh, clear tones.",
+  dark: "You favor deep tones full of narrative — mysterious and quietly powerful.",
+  warm: "You love warm, nostalgic tones, like old photographs and afternoon sun.",
+  east: "You're moved by negative space and the lyrical stillness of Eastern art.",
+};
+
+function uniqueArtists(paintings: SelectedPainting[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const s of paintings) {
+    const a = s.artistEn ?? s.artist;
+    if (a && !seen.has(a)) {
+      seen.add(a);
+      out.push(a);
+    }
+  }
+  return out;
+}
+
+function formatList(items: string[]): string {
+  if (items.length === 0) return "the masters you chose";
+  if (items.length === 1) return items[0];
+  if (items.length === 2) return `${items[0]} and ${items[1]}`;
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+}
+
+/**
+ * Builds the personality blurb from the user's REAL selected artists, so it can
+ * never name a painter they didn't choose. The opening line is the
+ * personality's fixed sensibility; the artists are drawn from the selections
+ * that produced that personality (falling back to all picks if too few).
+ */
+export function buildPersonalityDescription(
+  personality: Personality,
+  selections: SelectedPainting[],
+): string {
+  const matching = uniqueArtists(
+    selections.filter((s) => s.personality === personality),
+  );
+  const artists = matching.length >= 2 ? matching : uniqueArtists(selections);
+  return `${personalityOpenings[personality]} The worlds of ${formatList(
+    artists,
+  )} speak your color language.`;
+}
