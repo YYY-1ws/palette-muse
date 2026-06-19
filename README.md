@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Palette Muse
 
-## Getting Started
+Discover your color personality through art. Pick the paintings you're drawn to across five rounds, and Palette Muse builds a personal color palette from the ones you chose.
 
-First, run the development server:
+**Live demo:** [palette-muse-opal.vercel.app](https://palette-muse-opal.vercel.app)
+
+## How it works
+
+1. **Choose** — Five rounds of four paintings each (Flowers, Landscape, Figures, Interior, Still Life). Pick your favorite in each.
+2. **Discover** — Your choices map to one of four color personalities: Natural Poetic, Deep Romantic, Vintage Warmth, or Eastern Reverie.
+3. **Keep** — Get a five-color palette pulled from your chosen paintings. Tap a swatch to copy its HEX, re-roll any color, or save the palette as a card.
+
+## Features
+
+- 20 masterpieces from Monet to Hokusai, each tagged with its signature colors
+- Palette generation with a harmony check so the five colors sit well together
+- Re-roll any color up to three times
+- Shareable 1080×1080 palette card (Web Share on mobile, download on desktop)
+- Progress is saved locally, so you can close the tab and resume later
+- English-primary, Chinese-secondary throughout
+
+## Tech
+
+- [Next.js 16](https://nextjs.org) (App Router) · React 19 · TypeScript
+- Tailwind CSS v4 · Framer Motion
+- Zustand (persisted store) for assessment state
+- `html-to-image` for the share card · `sharp` for image preprocessing
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The processed painting images are committed under `public/paintings/`, so the app runs out of the box. To regenerate them from full-resolution sources placed in `raw-images/` (gitignored):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run preprocess-images
+```
 
-## Learn More
+## Project structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/          routes: landing, /assessment, /result
+components/   PaintingCard, RoundDisplay, PersonalityResult, ShareCard…
+lib/          rounds.json (paintings + colors), palette engine, Zustand store
+scripts/      image preprocessing
+public/       processed painting images
+```
